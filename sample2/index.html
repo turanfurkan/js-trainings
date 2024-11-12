@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Javascript | Objects
+    </title>
+</head>
+<body>
+    <h1>Objects</h1>
+    <script>
+        // Object Literal
+        let user = {
+            name: 'Furkan',
+            surname: 'Turan',
+            age: 26,
+            email: 'furkanturan10r@hotmail.com',
+            job: 'Computer Engineer',
+            spokenLanguages: ['Turkish', 'English'],
+            technologies: {
+                frontEnd: ['HTML', 'CSS', 'Javascript', 'React'],
+                backEnd: ['Node.js', 'Express', 'MongoDB']
+            },
+            fullName: function(){
+                return this.name + ' ' + this.surname;
+            },
+            showInfo: function(){
+                console.log("Name: " + this.name);
+                console.log("Surname: " + this.surname);
+                console.log("Age: " + this.age);
+                console.log("Email: " + this.email);
+                console.log("Job: " + this.job);
+                console.log("Spoken Languages: " + this.spokenLanguages);
+                console.log("Front-End Technologies: " + this.technologies.frontEnd);
+                console.log("Back-End Technologies: " + this.technologies.backEnd);
+            },
+            //Başka neler yapabiliriz ?
+            increaseAge: function(){
+                this.age++;
+            },
+            decreaseAge: function(){
+                this.age--;
+            },
+            updateJob: function(newJob){
+                this.job = newJob;
+            }
+        };
+
+        // console.log(user.fullName());
+
+        // user.decreaseAge();
+        // user.showInfo();
+
+        //Using a constructor function
+
+        function User(name, surname, age, email){
+            this.name = name;
+            this.surname = surname;
+            this.age = age;
+            this.email = email;
+            this.showInfo = function(){
+                console.log("Name: " + this.name);
+                console.log("Surname: " + this.surname);
+                console.log("Age: " + this.age);
+                console.log("Email: " + this.email);
+            }
+        }
+
+        const user1 = new User('Furkan', 'Turan', 26, 'furkanturanjob@gmail.com');
+        const user2 = new User('John', 'Doe', 30, 'jhondoe@gmail.com');
+
+        // user1.showInfo();
+        // user2.showInfo();
+
+        //Using the Object.create() method
+
+        const user3 = Object.create(user);
+        user3.name = 'Jane';
+        user3.surname = 'Doe';
+        user3.age = 25;
+        user3.email = 'janedoe@gmail.com';
+        user3.showInfo();
+
+        function showProps(obj, objName) {
+  let result = "";
+  for (const i in obj) {
+    // Object.hasOwn() is used to exclude properties from the object's
+    // prototype chain and only show "own properties"
+    if (Object.hasOwn(obj, i)) {
+      result += `${objName}.${i} = ${obj[i]}\n`;
+    }
+  }
+  console.log(result);
+}
+
+showProps(user, 'user');
+
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Challenge 1</title>
+
+    <style>
+        html{
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #bodyMassCalculator{
+            background-color: orange;
+            height: 100vh;
+        }
+        .container{
+            max-width: 80%;
+            padding: 45px 20px;
+        }
+
+        h2{
+            color: #fff;
+            font-size: 30px;
+            font-weight: bolder;
+            text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Coding Challenge #1
+        Mark and John are trying to compare their BMI (Body Mass Index), which is
+        calculated using the formula:
+        BMI = mass / height ** 2 = mass / (height * height) (mass in kg
+        and height in meter).
+        Your tasks:
+        1. Store Mark's and John's mass and height in variables
+        2. Calculate both their BMIs using the formula (you can even implement both
+        versions)
+        3. Create a Boolean variable 'markHigherBMI' containing information about
+        whether Mark has a higher BMI than John.
+        Test data:
+        § Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95
+        m tall.
+        § Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76
+        m tall.
+        GOOD LUCK 😀 
+    -->
+    <section id="bodyMassCalculator">
+        <div class="container">
+            <h2>
+                Coding Challenge 1
+            </h2>
+
+            <div class="data">
+                <h3>Data 1</h3>
+                <p>Mark's weight: 78 kg</p>
+                <p>Mark's height: 1.69 m</p>
+                <p>John's weight: 92 kg</p>
+                <p>John's height: 1.95 m</p>
+
+                <h3>Data 2</h3>
+                <p>Mark's weight: 95 kg</p>
+                <p>Mark's height: 1.88 m</p>
+                <p>John's weight: 85 kg</p>
+                <p>John's height: 1.76 m</p>
+            </div>
+
+            <div class="result">
+                <h3>Result 1</h3>
+                <p>Mark's BMI 1: <span id="markBMI1"></span></p>
+                <p>John's BMI 1: <span id="johnBMI"></span></p>
+                <p>Is Mark's BMI higher than John's BMI? <span id="markHigherBMI1"></span></p>
+            
+                <h3>Result 2</h3>
+                <p>Mark's BMI 2: <span id="markBMI2"></span></p>
+                <p>John's BMI 2: <span id="johnBMI2"></span></p>
+                <p>Is Mark's BMI higher than John's BMI? <span id="markHigherBMI2"></span></p>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="coding-challange-1.js"></script>
+  </body>
+</html>
