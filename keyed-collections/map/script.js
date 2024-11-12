@@ -7,5 +7,5 @@ students.set("Kemal", 5);
 students.set("Kadir", 96);
 
 students.forEach((grade, name) => {
-    console.log(`${name}'s grade: ${grade}`);
+  console.log(`${name}'s grade: ${grade}`);
 });
